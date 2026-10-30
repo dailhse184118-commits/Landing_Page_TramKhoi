@@ -68,7 +68,7 @@
     }
     el.dataset.motionWords = 'true';
   }
-  $$('.band h2,.static-copy h2,.section-heading,.intro-text').forEach(splitWords);
+  $$('.about-copy h1,.band h2,.static-copy h2,.section-heading,.intro-text').forEach(splitWords);
   function updateTicker() {
     if (!ticker) return;
     if (!armed || document.hidden || !ribbonVisible || ribbonUserPaused) ticker.pause();
@@ -94,7 +94,7 @@
     updateTicker();
   });
   function setupEntrances() {
-    cancels.push(inView('.section-heading,.intro-text', el => {
+    cancels.push(inView('.about-copy h1,.section-heading,.intro-text', el => {
       if (el.dataset.motionEntered) return;
       el.dataset.motionEntered = 'true';
       play([...el.querySelectorAll('.motion-word')], { y: ['105%', '0%'], rotateX: [35, 0], rotate: [3, 0], opacity: [0, 1] }, { duration: .68, delay: stagger(.055), ease });

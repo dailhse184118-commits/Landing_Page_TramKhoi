@@ -1,0 +1,23 @@
+.hero-nature,.hero-canopy,.morning-air{position:absolute;inset:0;pointer-events:none}
+.hero-nature{overflow:hidden;z-index:0}
+.hero-canopy{transform-origin:72% 45%;animation:canopy-breeze 15s ease-in-out infinite;animation-play-state:paused}
+.hero-canopy .hero-poster{animation:none;transform:none}
+.hero-stage.in-view .hero-canopy{animation-play-state:running}
+.morning-air{opacity:var(--morning,1);transition:opacity .7s ease;overflow:hidden}
+.morning-light{position:absolute;inset:-15%;background:radial-gradient(ellipse at 80% 15%,#ffedb81c,transparent 42%);animation:morning-light 19s ease-in-out infinite alternate;animation-play-state:paused}
+.dew{position:absolute;width:11px;height:16px;border-radius:65% 35% 62% 38% / 62% 36% 64% 38%;background:radial-gradient(ellipse at 28% 22%,#fff9 0 6%,#fff0 24%),linear-gradient(140deg,#e9fff72e,#f4fffb05 50%,#d5f3cf40);border:1px solid #e8ffe72e;box-shadow:inset -1px -2px 3px #d7ffe72b,0 2px 4px #071b182e;animation:dew-breathe 9s ease-in-out infinite;animation-play-state:paused;opacity:.55}
+.dew::after{content:"";position:absolute;width:3px;height:2px;top:3px;left:2px;border-radius:50%;background:#ffffffe0;transform:rotate(-35deg)}
+.dew:nth-of-type(2){left:69%;top:48%;animation-delay:-3s}
+.dew:nth-of-type(3){left:79%;top:63%;width:7px;height:10px;animation-delay:-7s}
+.dew:nth-of-type(4){left:88%;top:34%;width:9px;height:13px;animation-delay:-1s}
+.dew:nth-of-type(5){left:61%;top:71%;width:6px;height:9px;animation-delay:-5s}
+.hero-stage.in-view .morning-air *{animation-play-state:running}
+.nature-toggle{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid #f6f5eb35;border-radius:30px;background:#0b251940;color:#e2e9d9;font-size:9px;letter-spacing:.025em;white-space:nowrap;backdrop-filter:blur(6px)}
+.nature-toggle svg{width:13px;height:13px}.nature-toggle:hover{background:#163920a0}.nature-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.hero-bottom{gap:18px}.hero-bottom .load-state{margin-left:auto}
+.nature-paused .hero-canopy,.nature-paused .morning-air *,.paused .hero-canopy,.paused .morning-air *{animation-play-state:paused!important}
+@keyframes canopy-breeze{0%,100%{transform:scale(1.035) translate3d(-.25%,0,0) rotate(-.12deg)}35%{transform:scale(1.048) translate3d(.35%,.2%,0) rotate(.14deg)}70%{transform:scale(1.04) translate3d(-.1%,-.25%,0) rotate(-.05deg)}}
+@keyframes morning-light{from{transform:translate3d(-3%,-1%,0);opacity:.45}to{transform:translate3d(3%,2%,0);opacity:.85}}
+@keyframes dew-breathe{0%,100%{transform:translate3d(0,0,0) rotate(-12deg);opacity:.38}45%{transform:translate3d(1px,2px,0) rotate(-8deg);opacity:.78}70%{transform:translate3d(0,3px,0) rotate(-10deg);opacity:.52}}
+@media(max-width:720px){.hero-bottom .load-state{display:none}.nature-toggle{font-size:8px;padding:8px 10px}.dew:nth-of-type(4),.dew:nth-of-type(5){display:none}.dew:nth-of-type(2){left:77%;top:24%}.dew:nth-of-type(3){left:90%;top:40%}.morning-light{opacity:.4}}
+@media(prefers-reduced-motion:reduce){.hero-canopy{animation:none!important;transform:scale(1.035)}.morning-air,.nature-toggle{display:none!important}}

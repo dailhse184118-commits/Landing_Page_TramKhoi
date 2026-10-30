@@ -1,5 +1,13 @@
 # Trạm Khởi · Coffee & Kombucha
 
+## Nội dung cập nhật ngày 30/10/2026
+
+Trang dùng nội dung nhượng quyền và hình ảnh mới do Trạm Khởi cung cấp: định vị “Vạch xuất phát”, 6 lợi thế, 3 gói 10/25/85 triệu đồng, bảng so sánh, lộ trình và ảnh hoạt động. Chi tiết nguồn, chính sách và hành vi liên hệ: `CONTENT-UPDATE-20261030.md`.
+
+Giữ phần mở đầu “Một hạt cà phê”, Montserrat, menu đầy đủ và 4 ly 3D tương tác. Không tạo video mới. Ảnh phóng to vừa viewport, không cần cuộn trong hộp ảnh.
+
+Kiểm tra bản cập nhật tại 1440×900, 375×812, 768×1024 và 844×390: không tràn ngang, chọn gói, bảng so sánh, ảnh phóng to. Bộ kiểm tra ly 3D xác nhận kéo xoay, thanh góc, đặt lại, xem ảnh gốc và giảm chuyển động tại 1440×900, 375×812 và 844×390. Script và ảnh kiểm tra lưu trong review (cục bộ). Các báo cáo bên dưới mô tả các lần bàn giao trước.
+
 ## Deploy bằng Vercel
 
 Import repository này trong Vercel, giữ Root Directory là thư mục gốc repository (`./`). File `vercel.json` đã chọn output là `site/`, không chạy bước install hoặc build. Framework Preset là Other nếu giao diện hỏi. Sau đó bấm Deploy. Không đặt Root Directory thành `site` khi vẫn dùng cấu hình gốc này.
@@ -53,4 +61,4 @@ Theo yêu cầu người dùng, watermark ngôi sao bốn cánh được xử l�
 
 Chỉ đưa nội dung `site/` lên host. Không đưa source-assets, review, các script hoặc tài liệu lên host. Zip bàn giao có index.html ở gốc và assets bên cạnh.
 
-Trước khi xuất bản: chọn địa chỉ website rồi bổ sung og:url/og:image tuyệt đối tại comment DEPLOY STEP. Cần người dùng xem bản dựng và chọn thời điểm đưa lên mạng.
+Trang đã có og:url/og:image theo địa chỉ Vercel hiện tại. Khi đổi domain, cập nhật hai giá trị này trong site/index.html.
